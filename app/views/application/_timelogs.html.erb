@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Timelogs</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Log Type</th>
+      <th>Log At</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @timelogs.each_with_index do |timelog, index| %>
+      <tr>
+        <td><%= index + 1 %></td>
+        <td><%= timelog.log_type %></td>
+        <td><%= timelog.log_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

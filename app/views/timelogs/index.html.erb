@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Timelogs</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Log at</th>
+      <th>Log type</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @timelogs.each do |timelog| %>
+      <tr>
+        <td><%= timelog.log_at %></td>
+        <td><%= timelog.log_type %></td>
+        <td><%= timelog.user.username %></td>
+        <td>
+          <%= link_to edit_timelog_path(timelog) do%>
+            <%= icon('fas', 'pencil-alt') %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to timelog, method: :delete, data: { confirm: 'Are you sure?' } do%>
+            <%= icon('fas', "trash-alt") %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
