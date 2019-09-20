@@ -4,7 +4,7 @@ An important part of the HiMama platform is to allow teachers to clock-in/clock-
 
 This app is an implementation of the clock-in/clock-out flow of the teachers.
 
-To see a running demo of the app, visit https://lit-ridge-36962.herokuapp.com, 
+To see a running demo of the app, visit https://lit-ridge-36962.herokuapp.com. 
 There are three test users with the following credentials:
 * user1 = { email: 'akeem@example.com',
             username: 'Akeem',
