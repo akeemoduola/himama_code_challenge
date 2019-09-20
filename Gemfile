@@ -6,6 +6,8 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
+gem 'font-awesome-sass', '~> 5.9.0'
+gem 'toastr-rails'
 
 gem 'rails', '~> 5.2.3'
 gem 'pg', '>= 0.18', '< 2.0'

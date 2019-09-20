@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-4">
+		<h1>User Clock-In/Clock-Out</h1>
+
+		<div class="row" style="margin-bottom: 35px;">
+  		<div class="col-md-6">
+				<%= button_to 'Clock In', timelogs_path, id: 'clock_in_button', class: "btn btn-success btn-lg", remote: true,  params: {timelog: {log_type: 'clock_in'}} %>
+			</div>
+
+			<div class="col-md-6">
+				<%= button_to 'Clock Out', timelogs_path, id: 'clock_out_button', class: "btn btn-danger btn-lg",  remote: true,  params: {timelog: {log_type: 'clock_out'}} %>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top: 35px;">
+			<div class="col-md-6 ">
+				<%= link_to 'View log history', timelogs_path,  remote: true, class: 'btn btn-info btn-lg' %>
+			</div>
+			<div class="col-md-6">
+				<%= link_to 'Hide log history', "#current_user_logs", class: 'btn btn-warning btn-lg', data: { toggle: "collapse" } %>
+			</div>
+		</div>
+		<div id="current_user_logs" class="collapse">
+		</div>
+	</div>
+</div>

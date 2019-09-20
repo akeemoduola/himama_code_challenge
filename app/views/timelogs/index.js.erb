@@ -1,0 +1,2 @@
+$("#current_user_logs").html("<%= escape_javascript(render 'timelogs', locals: { timelogs: @timelogs } ) %>");
+$("#current_user_logs").collapse('show')
